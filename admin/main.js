@@ -1,10 +1,18 @@
 const loginForm = document.getElementById("login-form");
 const idInput = document.getElementById("admin-id");
 const passwordInput = document.getElementById("admin-password");
+const rememberIdCheckbox = document.getElementById("remember-id");
 const feedbackEl = document.getElementById("login-feedback");
 
 const Adminid = "admin";
 const Passwd = "123456";
+const rememberedIdKey = "rememberedAdminId";
+
+const rememberedId = localStorage.getItem(rememberedIdKey);
+if (rememberedId) {
+  idInput.value = rememberedId;
+  rememberIdCheckbox.checked = true;
+}
 
 const idFieldWrapper = idInput.closest(".input-field");
 const passwordFieldWrapper = passwordInput.closest(".input-field");
@@ -32,6 +40,24 @@ function hideFeedback() {
 idInput.addEventListener("input", () => {
   idFieldWrapper.classList.remove("is-error");
   if (!feedbackEl.hidden) hideFeedback();
+
+  if (rememberIdCheckbox.checked) {
+    const username = idInput.value.trim();
+    if (username) {
+      localStorage.setItem(rememberedIdKey, username);
+    } else {
+      localStorage.removeItem(rememberedIdKey);
+    }
+  }
+});
+
+rememberIdCheckbox.addEventListener("change", () => {
+  const username = idInput.value.trim();
+  if (rememberIdCheckbox.checked && username) {
+    localStorage.setItem(rememberedIdKey, username);
+  } else {
+    localStorage.removeItem(rememberedIdKey);
+  }
 });
 
 passwordInput.addEventListener("input", () => {
