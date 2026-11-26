@@ -1,11 +1,15 @@
 const loginForm = document.getElementById("login-form");
 const idInput = document.getElementById("admin-id");
 const passwordInput = document.getElementById("admin-password");
+<<<<<<< HEAD
 const rememberIdCheckbox = document.getElementById("remember-id");
+=======
+>>>>>>> 70a5a3afba62000a843015dbe9486315bbf1f635
 const feedbackEl = document.getElementById("login-feedback");
 
 const Adminid = "admin";
 const Passwd = "123456";
+<<<<<<< HEAD
 const rememberedIdKey = "rememberedAdminId";
 
 const rememberedId = localStorage.getItem(rememberedIdKey);
@@ -13,6 +17,8 @@ if (rememberedId) {
   idInput.value = rememberedId;
   rememberIdCheckbox.checked = true;
 }
+=======
+>>>>>>> 70a5a3afba62000a843015dbe9486315bbf1f635
 
 const idFieldWrapper = idInput.closest(".input-field");
 const passwordFieldWrapper = passwordInput.closest(".input-field");
@@ -40,6 +46,7 @@ function hideFeedback() {
 idInput.addEventListener("input", () => {
   idFieldWrapper.classList.remove("is-error");
   if (!feedbackEl.hidden) hideFeedback();
+<<<<<<< HEAD
 
   if (rememberIdCheckbox.checked) {
     const username = idInput.value.trim();
@@ -58,6 +65,8 @@ rememberIdCheckbox.addEventListener("change", () => {
   } else {
     localStorage.removeItem(rememberedIdKey);
   }
+=======
+>>>>>>> 70a5a3afba62000a843015dbe9486315bbf1f635
 });
 
 passwordInput.addEventListener("input", () => {

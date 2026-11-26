@@ -179,6 +179,7 @@ body {
   cursor: wait;
 }
 
+<<<<<<< HEAD
 .idchk {
   width: 100%;
   max-width: 340px;
@@ -201,6 +202,8 @@ body {
   accent-color: #005eb8;
 }
 
+=======
+>>>>>>> 70a5a3afba62000a843015dbe9486315bbf1f635
 .login-feedback {
   position: absolute;
   top: calc(100% + 16px);
