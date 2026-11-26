@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #202a35;
+    font-family: Arial, "Noto Sans KR", sans-serif;
+}
+
+.gallery-page {
+    padding: 40px 0;
+}
+
+.gallery-title {
+    width: min(800px, calc(100% - 32px));
+    margin: 0 auto 20px;
+    font-size: 28px;
+}
+
+.wrap {
+    width: min(800px, calc(100% - 32px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.gallery-card {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(32, 42, 53, 0.08);
+}
+
+.gallery-art {
+    aspect-ratio: 4 / 3;
+    background-color: #b6d5e7;
+}
+
+.gallery-art--01 {
+    background: linear-gradient(160deg, #b5e3f2 0 48%, #398aaa 49% 66%, #174e67 67%);
+}
+
+.gallery-art--02 {
+    background: linear-gradient(165deg, #f8c58a 0 38%, #e97d73 39% 61%, #574b75 62%);
+}
+
+.gallery-art--03 {
+    background: linear-gradient(145deg, #d6e8b3 0 35%, #6e9a69 36% 60%, #315c50 61%);
+}
+
+.gallery-art--04 {
+    background: linear-gradient(175deg, #d3edf0 0 42%, #65b4c1 43% 63%, #277487 64%);
+}
+
+.gallery-art--05 {
+    background: linear-gradient(145deg, #f3d9a5 0 36%, #92bd82 37% 62%, #54836b 63%);
+}
+
+.gallery-art--06 {
+    background: linear-gradient(155deg, #d8e8f7 0 42%, #91b6d3 43% 60%, #627d9d 61%);
+}
+
+.gallery-art--07 {
+    background: linear-gradient(150deg, #cce4b5 0 35%, #5d997c 36% 62%, #28665d 63%);
+}
+
+.gallery-art--08 {
+    background: linear-gradient(160deg, #eab9a4 0 35%, #8583a4 36% 60%, #424b70 61%);
+}
+
+.gallery-art--09 {
+    background: linear-gradient(145deg, #f7d8d1 0 37%, #d992a0 38% 60%, #8d657e 61%);
+}
+
+.gallery-art--10 {
+    background: linear-gradient(160deg, #f5dfb1 0 38%, #d5aa75 39% 62%, #a47858 63%);
+}
+
+.gallery-art--11 {
+    background: linear-gradient(170deg, #c6d8e6 0 42%, #7695a7 43% 62%, #405e73 63%);
+}
+
+.gallery-art--12 {
+    background: linear-gradient(145deg, #f6e2b9 0 38%, #e5b885 39% 61%, #ba8069 62%);
+}
+
+.gallery-card h2 {
+    margin: 0;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-page {
+        padding: 28px 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .wrap {
+        grid-template-columns: 1fr;
+    }
+}
